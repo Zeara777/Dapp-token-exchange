@@ -8,7 +8,7 @@ export const provider = (state = {}, action) => {
         case 'NETWORK_LOADED':
             return {
                 ...state,
-                chainId: action.chainId
+                chainID: action.chainID
             }
         case 'ACCOUNT_LOADED':
             return {
@@ -68,4 +68,3 @@ export const exchange = (state = { loaded: false, contract: {} }, action) => {
             return state
     }
 }
-

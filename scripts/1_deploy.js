@@ -1,6 +1,6 @@
-const { ethers } = require("hardhat")
-
 async function main() {
+  console.log(`Preparing deployment...\n`)
+
   //Fetch contracts to be deployed
   const Token = await ethers.getContractFactory('Token')
   const Exchange = await ethers.getContractFactory('Exchange')
@@ -8,7 +8,7 @@ async function main() {
   //Fetch accounts
   const accounts = await ethers.getSigners()
 
-  console.log('Accounts fetched: \n ${accounts[0].address} \n ${accounts[1].address} \n')
+  console.log(`Accounts fetched:\n${accounts[0].address}\n${accounts[1].address}\n`)
 
   //Deploy contracts
   const dapp = await Token.deploy('Dapp University', 'DAPP', '1000000')
@@ -34,5 +34,5 @@ main()
   .then(() => process.exit(0))
   .catch((error) => {
     console.error(error);
-    process.exitCode = 1;
+    process.exitCode(1);
 });
