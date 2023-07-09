@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import config from '../config.json';
@@ -12,6 +12,7 @@ import {
 } from '../store/interactions';
 
 import Navbar from './Navbar'
+import Markets from './Markets'
 
 function App() {
   const dispatch = useDispatch()
@@ -55,7 +56,7 @@ function App() {
       <main className='exchange grid'>
         <section className='exchange__section--left grid'>
 
-          {/* Markets */}
+          <Markets />
 
           {/* Balance */}
 
