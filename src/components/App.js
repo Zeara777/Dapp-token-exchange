@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import config from '../config.json';
@@ -8,11 +8,13 @@ import {
   loadNetwork,
   loadAccount,
   loadTokens,
-  loadExchange
+  loadExchange,
+  subscribeToEvents
 } from '../store/interactions';
 
-import Navbar from './Navbar'
-import Markets from './Markets'
+import Navbar from './Navbar';
+import Markets from './Markets';
+import Balance from './Balance';
 
 function App() {
   const dispatch = useDispatch()
@@ -58,7 +60,7 @@ function App() {
 
           <Markets />
 
-          {/* Balance */}
+          <Balance />
 
           {/* Order */}
 
