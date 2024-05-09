@@ -41,7 +41,7 @@ export const provider = (state = {}, action) => {
           contracts: [action.token],
           symbols: [action.symbol]
         }
-      case 'TOKEN_1_LOADED':
+      case 'TOKEN_1_BALANCE_LOADED':
         return {
           ...state,
           balances: [action.balance]
@@ -98,7 +98,7 @@ export const provider = (state = {}, action) => {
         }
 
         // ----------------------------------------------------------------------------------
-        // Transfer Cases (Deposit & Withdrawls)
+        // Transfer Cases (Deposit & Withdraw)
         case 'TRANSFER_REQUEST':
           return {
             ...state,
